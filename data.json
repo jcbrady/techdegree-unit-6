@@ -7,7 +7,7 @@
       "technologies": "HTML, CSS, & JavaScript", 
       "live_link": "https://jcbrady.github.io/techdegree-unit-1/", 
       "github_link": "https://github.com/jcbrady/techdegree-unit-1", 
-      "image_urls": ["/static/images/project1_square1], /static/images/project1_img1"] 
+      "image_urls": ["/static/images/quote_square1", "/static/images/project1_img1"] 
     },
     { "id": 1, 
       "project_name": "List Pagination", 
@@ -15,7 +15,7 @@
       "technologies": "HTML, CSS, & JavaScript", 
       "live_link": "https://jcbrady.github.io/techdegree-unit-2/", 
       "github_link": "https://github.com/jcbrady/techdegree-unit-2", 
-      "image_urls": ["/static/images/project2_square1], /static/images/project2_img1"] 
+      "image_urls": ["/static/images/studentlist_square1", "/static/images/project2_img1"] 
     }
   ]
 }

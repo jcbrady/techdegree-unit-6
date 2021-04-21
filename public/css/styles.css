@@ -82,7 +82,7 @@ a {
   width: 100%;
   max-width: 1200px;
   padding: 40px 50px 30px;
-  background: #fefefe;
+  background: #777777;
   border-bottom: 1px solid #eaeaea;
 }
 
@@ -223,13 +223,17 @@ nav a span {
   Home page styles
 */
 .portfolio-intro {
+  background-color: #777;
+  
   max-width: 1200px;
   padding: 40px 50px 30px;
+
 }
 
 .portfolio-intro h1 {
   font-size: 1.5rem;
-  color: #0a0a0a;
+  /* color: #0a0a0a; */
+  color: white;
   margin: 0 auto 8px;
 }
 
@@ -239,6 +243,7 @@ nav a span {
   margin: 0 auto;
   padding-bottom: 40px;
   border-bottom: 1px solid #eaeaea;
+  color: white;
 }
 
 .projects-box h5 {
@@ -247,8 +252,9 @@ nav a span {
   font-size: 13px;
   letter-spacing: 2.25px;
   text-transform: uppercase;
-  color: #222;;
+  /* color: #222; */
   margin: 0 auto 8px;
+
 }
 
 .cell a {

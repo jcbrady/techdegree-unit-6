@@ -3,7 +3,11 @@ const app = express();
 const { projects } = require("./data.json");
 const path = require("path");
 
+//console.log({projects})
 //console.log(projects)
+
+// enables body-parser object
+// app.use(express.urlencoded({extended:false}));
 
 // middleware
 // set view engine to pug and provide path to views
@@ -11,20 +15,22 @@ const path = require("path");
 //app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
-// setup middlewar to deliver static files
+// setup middleware to deliver static files
 app.use("/static", express.static("public"));
 
 // setup routes
 app.get("/", (req, res) => {
-  //console.log(projects)
+  // render the pug template, pass pug the projects object
+  // the second parameter enables pug to view the data object (declared in global variable)
   res.render("index", {projects});
+  // res.render("index");
 });
-
-// app.get("projects/:id", function (req, res, next) {
-//   const projectId = req.params.id;
-//   console.log(projectId)
-
-// });
+// Does the above rendered pug template call this route?
+app.get("projects/:id", function (req, res, next) {
+  //const projectId = req.params.id;
+  //console.log(projectId)
+  console.log("projects/:id route called.")
+});
 
 app.get("/about", (req, res) => {
   res.render("./about");
