@@ -1,18 +1,30 @@
 const express = require("express");
 const app = express();
-const pug = require("pug");
+const { projects } = require("./data.json");
 const path = require("path");
 
-// view engine pug
-app.set("views", path.join(__dirname, "views"));
+//console.log(projects)
+
+// middleware
+// set view engine to pug and provide path to views
+// set fallback if needed
+//app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
+// setup middlewar to deliver static files
 app.use("/static", express.static("public"));
 
+// setup routes
 app.get("/", (req, res) => {
-  res.render("index");
-  //res.send("Hello world.");
+  //console.log(projects)
+  res.render("index", {projects});
 });
+
+// app.get("projects/:id", function (req, res, next) {
+//   const projectId = req.params.id;
+//   console.log(projectId)
+
+// });
 
 app.get("/about", (req, res) => {
   res.render("./about");
