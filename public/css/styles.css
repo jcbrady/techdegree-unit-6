@@ -6,6 +6,7 @@
   background blue: #737f8b
   dark blue: #5a687a
 */
+
 * {
   box-sizing: border-box;
 }
@@ -30,9 +31,9 @@ body {
   transition: all 0.4s ease-out;
 }
 
-article {
-  /* background: #fefefe; */
-}
+/* article {
+  background: #fefefe;
+} */
 
 h1,h2,h3,h4,h5,p{
   font-family: 'Courgette', serif;

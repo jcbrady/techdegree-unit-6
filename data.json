@@ -8,7 +8,7 @@
       "live_link": "https://jcbrady.github.io/techdegree-unit-1/", 
       "github_link": "https://github.com/jcbrady/techdegree-unit-1", 
       "image_urls": ["/static/images/quote_square1", "/static/images/project1_img1"],
-      "image_alt": "Image on a computer, showing the random quote generator in use." 
+      "image_alt": "Image showing the random quote generator." 
     },
     { "id": 1, 
       "project_name": "List Pagination", 
@@ -17,7 +17,7 @@
       "live_link": "https://jcbrady.github.io/techdegree-unit-2/", 
       "github_link": "https://github.com/jcbrady/techdegree-unit-2", 
       "image_urls": ["/static/images/studentlist_square1", "/static/images/project2_img1"],
-      "image_alt": "Person using a computer with the list pagination program on screen."  
+      "image_alt": "Image of the list pagination program."  
     }
   ]
 }
