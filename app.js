@@ -36,8 +36,8 @@ app.get("/", (req, res) => {
 // This works but I don't understand why
 app.get("/projects/:id", function (req, res, next) {
   const projectId = req.params;
-  console.log(projectId);
-  console.log("projects/:id route called.");
+  // console.log(projectId);
+  // console.log("projects/:id route called.");
   // render the pug project file
   res.render("project", { projects });
 });
