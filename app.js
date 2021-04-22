@@ -11,11 +11,15 @@ const path = require("path");
 
 // middleware
 // set view engine to pug and provide path to views
-// set fallback if needed
+// is this a way to set a fallback if needed?
 //app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 // setup middleware to deliver static files
+// https://expressjs.com/en/starter/static-files.html
+
+// app.use(express.static('public'))
+// opting to use static prefix instead of above
 app.use("/static", express.static("public"));
 
 // setup routes
@@ -25,12 +29,19 @@ app.get("/", (req, res) => {
   res.render("index", {projects});
   // res.render("index");
 });
-// Does the above rendered pug template call this route?
-app.get("projects/:id", function (req, res, next) {
-  //const projectId = req.params.id;
-  //console.log(projectId)
-  console.log("projects/:id route called.")
+
+
+// Why use this dynamic route? 
+// To pass in the id's as a link in index, to the pug project file?
+// This works but I don't understand why
+app.get("/projects/:id", function (req, res, next) {
+  const projectId = req.params;
+  console.log(projectId);
+  console.log("projects/:id route called.");
+  // render the pug project file
+  res.render("project", { projects });
 });
+
 
 app.get("/about", (req, res) => {
   res.render("./about");

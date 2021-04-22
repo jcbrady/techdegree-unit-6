@@ -1,6 +1,10 @@
 
 /*
   Main styles
+
+  Colors
+  background blue: #737f8b
+  dark blue: #5a687a
 */
 * {
   box-sizing: border-box;
@@ -21,8 +25,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
-  /* background: #fefefe; */
-  background: rgb(115, 127, 139);
+  background: #737f8b;
   transform: translateX(0px);
   transition: all 0.4s ease-out;
 }
@@ -153,7 +156,7 @@ nav a span {
   width: 100%;
   max-width: 250px;
   border: 4px solid #fff;
-  border-radius: 50%; /* I added this style to make the photo round */
+  border-radius: 50%;
   box-shadow: 0px 0px 40px 5px #95a2b6;
 }
 
@@ -267,7 +270,7 @@ nav a span {
 .cell img {
   width: 100%;
   min-width: 100px;
-  border: 4px solid #fff;
+  border: 4px solid #5a687a;
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
   border-radius: 100px 0px;
 }

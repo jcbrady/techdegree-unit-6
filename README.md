@@ -4,4 +4,5 @@
 CSS
 - Changed background to be all one color
 - Changed the heading font
-- Made profile photo round
+- Made profile photo round and added effects
+- Rounded corners and other effects on the project images

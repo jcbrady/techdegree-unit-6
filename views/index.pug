@@ -23,7 +23,7 @@ block content
         - console.log(item.image_urls[0]+".png")
         - console.log(projects[0].description)
         .cell
-          a(href='#')
+          a(href=`/projects/${projects[0].id}`)
             img.thumbnail(src=`${item.image_urls[0]}.png`, alt=`${item.image_alt}`)
             h5 My Site
 
