@@ -5,10 +5,10 @@ block content
   article.portfolio-intro
 
     //- Replace with your own heading like 'My Portfolio', or 'Hey, Potential Employers', or 'Let's make the web great together!' 
-    h1 Hello, I'm John!
+    h1 Hello, my name's John!
 
     //- Replace with a description for your portfolio, what this project is, it's purpose, what it's supposed to accomplish, etc. 
-    p Here's a sample of projects I've put together while learning to code. I mainly chose JavaScript because of it's popularity and growth as a browser and server side language. 
+    p Here's a sample of some projects I've put together while learning JavaScript. 
 
 
   article.portfolio-project-thumbs
@@ -24,6 +24,6 @@ block content
         - console.log(projects[0].description)
         .cell
           a(href='#')
-            img.thumbnail(src=`${item.image_urls[0]}.png`, alt='')
+            img.thumbnail(src=`${item.image_urls[0]}.png`, alt=`${item.image_alt}`)
             h5 My Site
 
