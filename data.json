@@ -4,20 +4,22 @@
     { "id": 0, 
       "project_name": "Random Quote Generator", 
       "description": "Displays a random set of quotes from an array", 
-      "technologies": "HTML, CSS, & JavaScript", 
+      "technologies": ["HTML", "CSS", "JavaScript"], 
       "live_link": "https://jcbrady.github.io/techdegree-unit-1/", 
       "github_link": "https://github.com/jcbrady/techdegree-unit-1", 
-      "image_urls": ["/static/images/quote_square1", "/static/images/project1_img1"],
-      "image_alt": "Image showing the random quote generator." 
+      "image_urls": ["/static/images/quote_square1"],
+      "image_urlScreens": ["/static/images/project1_img1", "/static/images/project1_img2"],
+      "image_alt": "The random quote generator project" 
     },
     { "id": 1, 
       "project_name": "List Pagination", 
       "description": "Paginate a list of data so that it can be easily viewed on multiple pages", 
-      "technologies": "HTML, CSS, & JavaScript", 
+      "technologies": ["HTML", "CSS", "JavaScript"], 
       "live_link": "https://jcbrady.github.io/techdegree-unit-2/", 
       "github_link": "https://github.com/jcbrady/techdegree-unit-2", 
-      "image_urls": ["/static/images/studentlist_square1", "/static/images/project2_img1"],
-      "image_alt": "Image of the list pagination program."  
+      "image_urls": ["/static/images/studentlist_square1"],
+      "image_urlScreens": ["/static/images/project2_img1"],
+      "image_alt": "list pagination program"  
     }
   ]
 }

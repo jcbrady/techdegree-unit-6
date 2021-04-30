@@ -26,22 +26,20 @@ app.use("/static", express.static("public"));
 app.get("/", (req, res) => {
   // render the pug template, pass pug the projects object
   // the second parameter enables pug to view the data object (declared in global variable)
-  res.render("index", {projects});
+  res.render("index", { projects });
   // res.render("index");
 });
 
-
-// Why use this dynamic route? 
+// Why use this dynamic route?
 // To pass in the id's as a link in index, to the pug project file?
 // This works but I don't understand why
 app.get("/projects/:id", function (req, res, next) {
-  const projectId = req.params;
+  const projectId = req.params.id;
   // console.log(projectId);
   // console.log("projects/:id route called.");
   // render the pug project file
-  res.render("project", { projects });
+  res.render("project", { project: projects[projectId] });
 });
-
 
 app.get("/about", (req, res) => {
   res.render("./about");
