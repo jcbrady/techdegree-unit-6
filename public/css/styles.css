@@ -285,8 +285,18 @@ nav a span {
 }
 
 .about-bio p {
-  font-size: 15px;
-  padding-top: 40px;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* font-size: 15px; */
+  padding-top: 10px;
+}
+ /* additional styleing to body text */
+.sans-body-text {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.sans-body-text-italic {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: italic;
 }
 
 .skills-contact-box ul {
