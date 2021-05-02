@@ -3,23 +3,33 @@
   [
     { "id": 0, 
       "project_name": "Random Quote Generator", 
-      "description": "This project shows quotes from famous musicians by making a random selection from an array. Aside from clicking the button, the app changes the background color and quote every 10 seconds.", 
+      "description": "This project shows quotes from famous musicians by making a random selection from an array of quote objects. Aside from the user clicking the button, the app automatically changes the background color and displayed quote every 10 seconds.", 
       "technologies": ["HTML", "CSS", "JavaScript"], 
       "live_link": "https://jcbrady.github.io/techdegree-unit-1/", 
       "github_link": "https://github.com/jcbrady/techdegree-unit-1", 
       "image_urls": ["/static/images/quote_square1"],
-      "image_urlScreens": ["/static/images/project1_img1", "/static/images/project1_img2"],
+      "image_urlScreens": ["/static/images/project1_img1", "/static/images/project1_img2", "/static/images/project1_img3"],
       "image_alt": "The random quote generator project" 
     },
     { "id": 1, 
       "project_name": "List Pagination", 
-      "description": "Paginate a list of data so that it can be easily viewed on multiple pages", 
+      "description": "Break up a long list of students into separate pages that can be easily viewed. This simple but useful pagination program can work with short or long lists of data.", 
       "technologies": ["HTML", "CSS", "JavaScript"], 
       "live_link": "https://jcbrady.github.io/techdegree-unit-2/", 
       "github_link": "https://github.com/jcbrady/techdegree-unit-2", 
       "image_urls": ["/static/images/studentlist_square1"],
-      "image_urlScreens": ["/static/images/project2_img1"],
+      "image_urlScreens": ["/static/images/project2_img1", "/static/images/project2_img2", "/static/images/project2_img3"],
       "image_alt": "list pagination program"  
+    },
+    { "id": 2, 
+      "project_name": "Form Validation", 
+      "description": "Validate a submission form to help prepare data to be more usable. This form features is for a fictional tech conference. It features multiple selections, conditional checkboxes and won't submit unless multiple criteria are met.", 
+      "technologies": ["HTML", "CSS", "JavaScript"], 
+      "live_link": "https://jcbrady.github.io/techdegree-unit-3/", 
+      "github_link": "https://github.com/jcbrady/techdegree-unit-3", 
+      "image_urls": ["/static/images/creditcard1"],
+      "image_urlScreens": ["/static/images/project3_img1", "/static/images/project3_img3"],
+      "image_alt": "form validation"  
     }
   ]
 }

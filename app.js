@@ -41,8 +41,7 @@ app.get("/about", (req, res) => {
   res.render("./about");
 });
 
-// redirect on /projects with no id. If someone types in projects, they'll get
-// the first project page instead of an error.
+// redirect on /projects with no id. If someone types in projects, they'll land on the first project page.
 app.get("/projects", (req, res) => {
   res.redirect("/projects/0");
 });
@@ -50,11 +49,6 @@ app.get("/projects", (req, res) => {
 // ERROR HANDLING
 app.use((req, res, next) => {
   console.log("404 error handler called");
-
-  /* TODO 1: Send a response to the client
-    - Set the response status to 404
-    - Render the 'not-found' view
-  */
   res.status(404).render("error");
 });
 
@@ -63,26 +57,16 @@ app.use((err, req, res, next) => {
   if (err) {
     console.log("Global error handler called", err);
   }
-  /* TODO 2: Handle errors caught by your route handlers
-    - If the error status is 404:
-        * Set the response status to 404
-        * Render the 'not-found' view and pass the error object to the view
-    - Else:
-        * Set the error message to the given message, or specify a general, 
-          default error message
-        * Set response status to the given error status OR, 
-          set it to 500 by default if no error status is set
-        * Render the 'error' view, passing it the error object
-  */
-          if (err.status === 404) {
-            res.status(404).render("error", { err });
-            console.log(err, 404);
-          } else {
-            console.log("bogus dude.");
-            err.message = err.message || "Oops! It looks like something went wrong on the server.";
-            res.status(err.status || 500).render("error", { err });
-          }
-        });
+
+  if (err.status === 404) {
+    res.status(404).render("error", { err });
+    console.log(err, 404);
+  } else {
+    console.log("Whoops, there was an error.");
+    err.message = err.message || "Oops! It looks like something went wrong on the server.";
+    res.status(err.status || 500).render("error", { err });
+  }
+});
 
 // PORT - Reference: Code with Mosh demo
 const port = process.env.PORT || 3000;

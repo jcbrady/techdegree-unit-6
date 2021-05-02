@@ -20,10 +20,11 @@ block content
           //- The paths in the link's href and img's src attributes
           //- The text 'Thumbnail' interpolated with the project title for the img's alt attribute
           //- The project title for the h5 element's text
-        - console.log(item.image_urls[0]+".png")
-        - console.log(projects[0].description)
+        //- console.log(item.image_urls[0]+".png")
+        //- console.log(projects[0].description)
         .cell
-          a(href=`/projects/${projects[0].id}`)
+          -console.log(item.id)
+          a(href=`/projects/${item.id}`)
             img.thumbnail(src=`${item.image_urls[0]}.png`, alt=`${item.image_alt}`)
-            h5 My Site
+            h6= item.project_name
 
