@@ -86,7 +86,7 @@ a {
 .box {
   width: 100%;
   max-width: 1200px;
-  padding: 40px 50px 30px;
+  padding: 10px 50px 30px;
   /* background: #777777; */
   border-bottom: 1px solid #eaeaea; 
 }
@@ -325,6 +325,10 @@ nav a span {
 
 .btn-container {
   margin-top: 2em;
+}
+
+h6 {
+  color: #5a687a;
 }
 
 /* 

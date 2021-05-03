@@ -3,27 +3,18 @@ extends layout.pug
 block content
 
   article.portfolio-intro
-
-    //- Replace with your own heading like 'My Portfolio', or 'Hey, Potential Employers', or 'Let's make the web great together!' 
+ 
     h1 Hello, my name's John!
 
-    //- Replace with a description for your portfolio, what this project is, it's purpose, what it's supposed to accomplish, etc. 
-    p Here's a sample of some projects I've put together while learning JavaScript 
+    p Glad you're here! This portfolio demonstrates my skills with various web technologies and is meant to generate discussion about how I can help your company. For starters, here are some projects I've put together while learning JavaScript. 
 
 
   article.portfolio-project-thumbs
     .projects-box.box.grid
 
-      //- Use the Pug `each` iterator to loop over the projects in your data file  
       each item in projects   
-        //- Use the example Pug code below and interpolated template literals as needed to dynamically generate:
-          //- The paths in the link's href and img's src attributes
-          //- The text 'Thumbnail' interpolated with the project title for the img's alt attribute
-          //- The project title for the h5 element's text
-        //- console.log(item.image_urls[0]+".png")
-        //- console.log(projects[0].description)
+
         .cell
-          -console.log(item.id)
           a(href=`/projects/${item.id}`)
             img.thumbnail(src=`${item.image_urls[0]}.png`, alt=`${item.image_alt}`)
             h6= item.project_name

@@ -3,34 +3,21 @@ const app = express();
 const { projects } = require("./data.json");
 const path = require("path");
 
-//console.log({projects})
-//console.log(projects)
-
-// this enables body-parser object
-// app.use(express.urlencoded({extended:false}));
-
-// middleware
+// MIDDLEWARE
 // set view engine to pug and provide path to views
-// is this a way to set a fallback if needed?
-//app.set("views", path.join(__dirname, "views"));
-
 app.set("view engine", "pug");
 
-// setup middleware to deliver static files
-// https://expressjs.com/en/starter/static-files.html
-
-// app.use(express.static('public'))
-// opting to use static prefix instead of above
+// Serve static files with static prefix
 app.use("/static", express.static("public"));
 
-// setup routes
+// ROUTES
 app.get("/", (req, res) => {
   // render the pug template, pass pug the projects object
-  // the second parameter enables pug to view the data object (declared in global variable)
+  // the second parameter enables pug to view the data object 
   res.render("index", { projects });
 });
 
-// Add a route with route variables for project pages
+// Route parameters for local variables on project pages
 app.get("/projects/:id", function (req, res, next) {
   const projectId = req.params.id;
   // render the pug project template
@@ -49,7 +36,8 @@ app.get("/projects", (req, res) => {
 // ERROR HANDLING
 app.use((req, res, next) => {
   console.log("404 error handler called");
-  res.status(404).render("error");
+  res.status(404).render("page-not-found");
+  //next();
 });
 
 /* Global error handler */
@@ -59,7 +47,7 @@ app.use((err, req, res, next) => {
   }
 
   if (err.status === 404) {
-    res.status(404).render("error", { err });
+    res.status(404).render("page-not-found", { err });
     console.log(err, 404);
   } else {
     console.log("Whoops, there was an error.");
@@ -68,7 +56,8 @@ app.use((err, req, res, next) => {
   }
 });
 
-// PORT - Reference: Code with Mosh demo
+// PORT - To run on a remote server 
+// Reference: Code with Mosh demo
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`app is listening on port ${port}`);
